@@ -5,7 +5,6 @@ import nodemailer from 'nodemailer';
 import { emailPlanSchema } from '@/utils/validation';
 import { getCurrentUser } from '@/lib/auth/getCurrentUser';
 import { redirect } from 'next/navigation';
-import { overview } from '@/test_json/overview';
 import Template from '@/components/template/template';
 import prisma from '@/lib/prisma';
 
