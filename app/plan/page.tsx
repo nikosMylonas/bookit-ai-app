@@ -6,20 +6,7 @@ import { attributes } from '@/config/attr';
 import { getLatestPlanVersion } from '@/data-access-layer/getTripPlans';
 import { getTripProfile } from '@/data-access-layer/getTripProfile';
 import { getCurrentUser } from '@/lib/auth/getCurrentUser';
-import prisma from '@/lib/prisma';
 import { formatDate } from '@/utils/helpers';
-import {
-    BedDouble,
-    Calendar1,
-    FilePlus2,
-    Landmark,
-    Notebook,
-    Plane,
-    ReceiptText,
-    Target,
-    Tickets,
-    User,
-} from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';

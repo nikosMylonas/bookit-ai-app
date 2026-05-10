@@ -1,5 +1,5 @@
 import { onboardingOptions } from '@/data-static/data-provider';
-import { email, z } from 'zod';
+import { z } from 'zod';
 
 export const signupSchema = z
     .object({

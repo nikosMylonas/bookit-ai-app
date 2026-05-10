@@ -48,25 +48,6 @@ export async function getPlanByVersion(version: number) {
 
         const overviewConverted = JSON.parse(planVersion.plan_text);
 
-        // console.log('Plan converted from text:', overviewConverted);
-
-        // const plan = {
-        //     goal: overviewConverted.overview.goal,
-        //     kids: overviewConverted.overview.kids,
-        //     dates: overviewConverted.overview.dates,
-        //     notes: overviewConverted.overview.notes,
-        //     persons: overviewConverted.overview.persons,
-        //     location: overviewConverted.overview.location,
-        //     insurance: overviewConverted.overview.insurance,
-        //     destination: overviewConverted.overview.destination,
-        //     accommodation: overviewConverted.overview.accommodation,
-        //     primaryTicket: overviewConverted.overview.primaryTicket,
-        //     recommendations: overviewConverted.overview.recommendations,
-        //     comments: overviewConverted.overview.comments,
-        //     version: planVersion.version,
-        //     createdAt: planVersion.createdAt,
-        // };
-
         const plan = {
             ...overviewConverted,
             version: planVersion.version,
@@ -76,7 +57,7 @@ export async function getPlanByVersion(version: number) {
         return plan;
     } catch (err) {
         console.log('Error fetching plan by version:', err);
-        // throw new Error('Unknown Error. Please try again');
+        return null;
     }
 }
 

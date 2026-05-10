@@ -8,13 +8,13 @@ export default async function proxy(req: NextRequest) {
     const isSignInPage = req.nextUrl.pathname.startsWith('/auth/sign-in');
     const isSignUpPage = req.nextUrl.pathname.startsWith('/auth/sign-up');
 
-    // If user is looged in don't allow sign-in and sign-up pages.
+    // If user is loged in don't allow sign-in and sign-up pages.
     // Instead, redirect to base protected page.
     if ((isSignInPage || isSignUpPage) && tokenValue) {
         return NextResponse.redirect(new URL(baseProtectedPage, req.url));
     }
 
-    // If user is looged in don't allow home page.
+    // If user is loged in don't allow home page.
     // Instead, redirect to base protected page.
     if (tokenValue && req.nextUrl.pathname === basePublicPage) {
         return NextResponse.redirect(new URL(baseProtectedPage, req.url));

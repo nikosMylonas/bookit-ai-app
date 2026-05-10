@@ -1,22 +1,9 @@
 import TripPlanCard from '@/components/cards/TripPlanCard';
 import EmailForm from '@/components/forms/EmailForm';
-import { Card } from '@/components/ui/card';
 import { attributes } from '@/config/attr';
 import { getPlanByVersion } from '@/data-access-layer/getTripPlans';
 import { getCurrentUser } from '@/lib/auth/getCurrentUser';
 import { formatDate } from '@/utils/helpers';
-import {
-    BedDouble,
-    Calendar1,
-    FilePlus2,
-    Landmark,
-    Notebook,
-    Plane,
-    ReceiptText,
-    Target,
-    Tickets,
-    User,
-} from 'lucide-react';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 

@@ -25,7 +25,6 @@ export const features = [
     },
 ];
 
-// Data - Later this data will be moved to a DB table.
 export const onboardingOptions = {
     numberPersonsOptions: [
         { value: '1', label: 'Single Person' },
