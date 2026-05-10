@@ -1,65 +1,95 @@
-import Image from "next/image";
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { features } from '@/data-static/data-provider';
+import { ArrowRight, Zap } from 'lucide-react';
+import Link from 'next/link';
 
-export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+export default async function HomePage() {
+    return (
+        <main>
+            <div className="div-container pt-8">
+                {/* Hero Section */}
+                <section className="relative">
+                    {/* Background gradient */}
+                    <div className="absolute inset-0 bg-linear-to-b from-accent/5 via-transparent to-transparent" />
+                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-accent/10 rounded-full blur-3xl" />
+                    <div className="relative max-w-4xl mx-auto text-center">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border mb-8 mt-16">
+                            <Zap className="w-4 h-4 text-accent" />
+                            <span className="text-sm text-muted">
+                                AI-powered trip plans
+                            </span>
+                        </div>
+
+                        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+                            Your Perfect
+                            <br />
+                            <span className="text-accent">Trip Plan</span> in
+                            Seconds
+                        </h1>
+                        <p className="text-lg text-muted max-w-2xl mx-auto mb-10">
+                            Stop searching in different apps. Get a personalized
+                            trip program built by AI, tailored to your
+                            destination, budget, trip preferences, and schedule.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
+                            <Link href="/auth/sign-up">
+                                <Button
+                                    size="authLg"
+                                    variant="auth"
+                                    className="gap-2 hover:cursor-pointer"
+                                >
+                                    Get Started Free{' '}
+                                    <ArrowRight className="w-5 h-5" />
+                                </Button>
+                            </Link>
+                            <Link href="/auth/sign-in">
+                                <Button
+                                    variant="authSecondary"
+                                    size="authLg"
+                                    className="hover:cursor-pointer"
+                                >
+                                    Sign In
+                                </Button>
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Features Section */}
+                <section className="py-20 px-6">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                                Why Use AI?
+                            </h2>
+                            <p className="text-muted text-lg max-w-2xl mx-auto">
+                                We combine travel expertise with AI to create
+                                programs that actually fit your expectations.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {features.map((feature, idx) => (
+                                <Card
+                                    key={idx}
+                                    className="p-6 hover:bg-accent/20 transition-colors"
+                                >
+                                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-2 hover:bg-accent/20 transition-colors">
+                                        <feature.icon className="w-6 h-6 text-accent" />
+                                    </div>
+                                    <h3 className="font-semibold text-foreground text-lg mb-2 ">
+                                        {feature.title}
+                                    </h3>
+                                    <p className="text-muted text-sm ">
+                                        {feature.description}
+                                    </p>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    );
 }
