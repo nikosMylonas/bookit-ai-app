@@ -2,6 +2,9 @@
   "name": "bookit-ai-app",
   "version": "0.1.0",
   "private": true,
+  "engine": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
