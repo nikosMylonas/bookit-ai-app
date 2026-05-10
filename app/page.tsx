@@ -4,6 +4,7 @@ import { features } from '@/data-static/data-provider';
 import { ArrowRight, Zap } from 'lucide-react';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
 export default async function HomePage() {
     return (
         <main>

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     description: attributes.signUp.description,
 };
 
+export const dynamic = 'force-dynamic';
 export default async function SignUpPage() {
     return (
         <main>

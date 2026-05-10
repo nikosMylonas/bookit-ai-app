@@ -1,6 +1,7 @@
 import { getCurrentUser } from '@/lib/auth/getCurrentUser';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
 export default async function NotFound() {
     const user = await getCurrentUser();
 

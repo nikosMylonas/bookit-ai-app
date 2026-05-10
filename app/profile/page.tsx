@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description: attributes.profile.description,
 };
 
+export const dynamic = 'force-dynamic';
 export default async function TripProfilePage() {
     const user = await getCurrentUser();
     if (!user) {

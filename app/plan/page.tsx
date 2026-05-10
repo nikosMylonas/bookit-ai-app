@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     description: attributes.plan.description,
 };
 
+export const dynamic = 'force-dynamic';
 export default async function PlanPage() {
     const user = await getCurrentUser();
 

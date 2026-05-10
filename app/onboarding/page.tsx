@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description: attributes.onboarding.description,
 };
 
+export const dynamic = 'force-dynamic';
 export default async function OnboardingPage() {
     const user = await getCurrentUser();
 
