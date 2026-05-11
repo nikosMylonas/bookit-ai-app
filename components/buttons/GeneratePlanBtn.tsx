@@ -66,7 +66,7 @@ export default function GeneratePlanBtn({
         if (errorState && errorAIContent) {
             toast.error(errorAIContent);
         } else if (errorState && errorMaxVersion) {
-            toast.error(errorMaxVersion);
+            toast.warning(errorMaxVersion);
         } else if (errorState && errorPlanCreated) {
             toast.error(errorPlanCreated);
         } else if (errorState && errorGeneric) {
