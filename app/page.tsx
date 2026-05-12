@@ -12,7 +12,7 @@ export default function HomePage() {
                 <section className="relative">
                     {/* Background gradient */}
                     <div className="absolute inset-0 bg-linear-to-b from-accent/5 via-transparent to-transparent" />
-                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-200 h-200 bg-accent/10 rounded-full blur-3xl" />
+                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-40 md:w-200 h-40 md:h-200 bg-accent/10 rounded-full blur-3xl" />
                     <div className="relative max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border mb-8 mt-16">
                             <Zap className="w-4 h-4 text-accent" />
