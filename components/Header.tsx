@@ -34,7 +34,6 @@ export default async function Header() {
                 <nav>
                     {user ? (
                         <div className="flex items-center justify-between gap-x-2">
-                            {/* <NavBarMobileBtn /> */}
                             <div className="hidden md:block">
                                 <Link href={attributes.onboarding.path}>
                                     <Button
@@ -66,7 +65,6 @@ export default async function Header() {
                             </div>
                             <NavBarMobileBtn />
 
-                            {/* <UserButton className="bg-accent text-background hover:text-foreground" /> */}
                             <DropdownMenu>
                                 <DropdownMenuTrigger>
                                     <Avatar className="hover:cursor-pointer">
@@ -77,47 +75,6 @@ export default async function Header() {
                                     </Avatar>
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
-                                    {/* <div className="md:hidden">
-                                        <DropdownMenuItem>
-                                            <Link
-                                                href={
-                                                    attributes.onboarding.path
-                                                }
-                                            >
-                                                <Button
-                                                    variant="ghost"
-                                                    size="sm"
-                                                    className="hover:cursor-pointer text-sm"
-                                                >
-                                                    {attributes.onboarding.name}
-                                                </Button>
-                                            </Link>
-                                        </DropdownMenuItem>
-                                        <DropdownMenuItem>
-                                            <Link
-                                                href={attributes.profile.path}
-                                            >
-                                                <Button
-                                                    variant="ghost"
-                                                    size="sm"
-                                                    className="hover:cursor-pointer text-sm"
-                                                >
-                                                    {attributes.profile.name}
-                                                </Button>
-                                            </Link>
-                                        </DropdownMenuItem>
-                                        <DropdownMenuItem>
-                                            <Link href={attributes.plan.path}>
-                                                <Button
-                                                    variant="ghost"
-                                                    size="sm"
-                                                    className="hover:cursor-pointer text-sm"
-                                                >
-                                                    {attributes.plan.name}
-                                                </Button>
-                                            </Link>
-                                        </DropdownMenuItem>
-                                    </div> */}
                                     <DropdownMenuItem>
                                         <Link
                                             href={attributes.account.path}
@@ -155,10 +112,6 @@ export default async function Header() {
                             </Link>
                         </div>
                     )}
-
-                    {/* Mobile nav */}
-                    {/* <NavBarMobileBtn /> */}
-                    {/* <div className="md:hidden"></div> */}
                 </nav>
             </div>
         </header>
