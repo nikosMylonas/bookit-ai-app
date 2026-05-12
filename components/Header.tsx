@@ -21,7 +21,7 @@ export default async function Header() {
     const fallBackInitials = user?.name ? initialsGenerator(user?.name) : '';
 
     return (
-        <header className="fixed top-0 left-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+        <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
             <div className="relative div-container h-16 flex items-center justify-between">
                 <Link
                     href={user ? '/onboarding' : '/'}
@@ -91,7 +91,7 @@ export default async function Header() {
                             </DropdownMenu>
                         </div>
                     ) : (
-                        <div className="justify-self-end space-x-2">
+                        <div className="space-x-2">
                             <Link href={attributes.signIn.path}>
                                 <Button
                                     variant="ghost"
