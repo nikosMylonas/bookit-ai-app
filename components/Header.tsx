@@ -91,7 +91,7 @@ export default async function Header() {
                             </DropdownMenu>
                         </div>
                     ) : (
-                        <div className="space-x-2">
+                        <div className="justify-self-end space-x-2">
                             <Link href={attributes.signIn.path}>
                                 <Button
                                     variant="ghost"
