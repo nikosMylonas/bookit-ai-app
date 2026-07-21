@@ -9,13 +9,13 @@ export const attributes = {
 
     signIn: {
         name: 'Sign In',
-        title: 'BookIt | Sing In Page',
+        title: 'BookIt | Sign In Page',
         description: 'Sign In to your account in BookIt app.',
         path: '/auth/sign-in',
     },
     signUp: {
         name: 'Sign Up',
-        title: 'BookIt | Sing Up Page',
+        title: 'BookIt | Sign Up Page',
         description: 'Create a new account in the BookIt app.',
         path: '/auth/sign-up',
     },
